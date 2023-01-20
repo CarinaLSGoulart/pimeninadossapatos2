@@ -13,7 +13,7 @@
   <main>
     <!-- TÍTULO PRINCIPAL -->
     <div class="tituloPrincipal">
-        <h1> FEMININO </h1>
+      <h1> FEMININO </h1>
     </div>
     <!-- PÁGINA PRINCIPAL -->
     <div class="paginaPrincipal">
@@ -21,7 +21,7 @@
       <p class="tituloFiltro"> FILTROS </p>
       <div class="removerFiltros">
         <p class="remove"> Remover Filtros</p>
-        <img class="lixo" src="/img/imgFeminino/lixeira.png" alt="remover-filtros">
+        <img class="lixo" src="img/imgLogin/lixeira.png" alt="remover-filtros">
       </div>
       <div class="busca">
         <p class="busque"> Busque por preço </p>
@@ -29,10 +29,10 @@
   </div>
     <div class="produtos">
       <% feminino.forEach(function(modelo){ %>
-             <div class="produto1">
-               <a href="/produto"><img class="produtos-femininos" src="<%=modelo.img %>" alt="tenis1"></a>
-               <p class="preco"><%=modelo.price %></p>
-              </div>
+        <div class="produto1">
+          <a href="/produto"><img class="produtos-femininos" src="<%=modelo.img %>" alt="tenis1"></a>
+          <p class="preco"><%=modelo.price %></p>
+        </div>
       <% }) %>
     </div>
   </div>    
