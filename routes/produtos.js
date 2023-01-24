@@ -3,6 +3,6 @@ let router = express.Router();
 
 const produtoController = require('../controllers/produtoController')
 
-router.get('/feminino', produtoController.feminino)
+router.get('/', produtoController.produtos)
 
 module.exports = router;

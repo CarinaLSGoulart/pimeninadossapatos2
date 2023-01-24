@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/feminino.css">
+    <title>Menina dos Sapatos - Produtos</title>
+  </head>
+
+  <body>
+    <%- include("./partials/header") %>
+      <main>
+        <!-- TÍTULO PRINCIPAL -->
+        <div class="tituloPrincipal">
+          <h1> PRODUTOS </h1>
+        </div>
+        <!-- PÁGINA PRINCIPAL -->
+        <div class="paginaPrincipal">
+          <div class="menuLateral">
+            <p class="tituloFiltro"> FILTROS </p>
+            <div class="removerFiltros">
+              <p class="remove"> Remover Filtros</p>
+              <img class="lixo" src="img/imgLogin/lixeira.png" alt="remover-filtros">
+            </div>
+            <div class="busca">
+              <p class="busque"> Busque por preço </p>
+            </div>
+          </div>
+        </div>
+      </main>
+  </body>
+  <!-- FOOTER  -->
+  <%- include("./partials/footer") %>
+
+</html>
