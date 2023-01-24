@@ -6,7 +6,6 @@ const session = require('express-session')
 /* ===== Biblioteca ===== */
 app.use(express.json());
 
-
 /* =========== Routes =========== */
 const routesHome = require('./routes/home');
 const dadosDePagamento = require('./routes/dadosDePagamento');
@@ -15,9 +14,9 @@ const routesUsuario = require('./routes/usuario');
 const routesPedido = require('./routes/pedido');
 const routesPoliticas = require('./routes/politicas');
 const routesProduto = require('./routes/produto');
-const routesFeminino = require('./routes/feminino');
+const routesProdutos = require('./routes/produtos');
 const routesSacola = require('./routes/sacola');
-const routesCadastro = require('./routes/usuario')
+
 
 /* Log */
 let logmiddleware = require('./middlewares/logSite')
@@ -26,15 +25,15 @@ app.use(logmiddleware)
 app.use(session({secret: 'MeninaDosSapatos'}))
 
 app.use('/', routesHome);
+app.use('/login', routesUsuario);
+app.use('/sacola', routesSacola);
+app.use('/produtos', routesProdutos);
+app.use('/produto', routesProduto);
+app.use('/pedido', routesPedido);
 app.use('/dadosDePagamento', dadosDePagamento);
 app.use('/enderecoDeEntrega', routerenderecoDeEntrega);
-app.use('/Login', routesUsuario);
-app.use('/Pedido', routesPedido);
-app.use('/Politicas', routesPoliticas);
-app.use('/Produto', routesProduto);
-app.use('/Sacola', routesSacola);
-app.use('/feminino', routesFeminino);
-app.use('/cadastro', routesCadastro);
+app.use('/politicas', routesPoliticas);
+
 
 /* ===== EJS ===== */
 app.set("view engine", "ejs") 

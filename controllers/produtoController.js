@@ -15,7 +15,10 @@ const produtoController = {
     produto: (req, res) => {
         res.render('produto')
     },
-    feminino: (req, res) => {
+    produtos: (req, res) => {
+        res.render('produtos')
+    }
+    /* feminino: (req, res) => {
         if (req.session.userLogged){
             res.render('feminino', {
                 feminino
@@ -23,7 +26,7 @@ const produtoController = {
         }else{
             res.redirect('/')
         }
-    }
+    } */
 }
 
 module.exports = produtoController;

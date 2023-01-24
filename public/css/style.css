@@ -51,17 +51,16 @@
 
 /* CENTRALIZAR LOGO E NAO MOVIMENTAR Ao EXECUTAR ANIMAÇÃO DE PESQUISAR */
 .logo img {
-  
   width: 150px;
   position: relative;
-  /* left: 100px; */
+  
 
 }
 
 .anim-lupa {
   width: 130px;
   margin-left: 140px;
-  left: 80px;
+  left: 70px;
   width: 30%;
   position: fixed;
   width:auto;
