@@ -1,25 +1,53 @@
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 12%;
-  margin-left: 5%;
+body{
+  margin-top: 90px;
+  width: 100%;
 }
 
-.link1 {
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link2 {
   background-color: yellow;
 }
 
-.Minhaconta {
+.submenu {
+  display: block;
+  align-items: center;
+}
+.minhaConta-menu {
   text-decoration: none;
-  list-style: none;
+  width: 100%;
+  gap: 5px;
 }
 
-.Meuperfil {
+.minhaConta {
+  width: 50%;
+  height:25rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.meuPerfil {
+  background-color: yellow;
+  height:27.5rem;
+  width: 50%;
+  display:flex;
+  flex-direction: column;
   text-decoration: none;
   list-style: none;
-  margin-left: 5%;
-  
+  align-items: center;
+  text-align: center;
 }
 .container2 {
   display: flex;

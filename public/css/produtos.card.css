@@ -1,5 +1,7 @@
 .card-shoes {
-  overflow: hidden;
+  overflow: hidden; 
+  width: 25%;
+  height: 500px;
 }
 
 .card-shoes-image {
@@ -12,7 +14,7 @@
 
 .card-shoes-details {
   padding: 5px 5px;
-  width: 24%;
+  width: 100%;
 }
 
 .card-shoes-image {
