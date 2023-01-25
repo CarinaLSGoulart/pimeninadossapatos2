@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/feminino.css">
+    <link rel="stylesheet" href="/css/produtos.css">
+    <link rel="stylesheet" href="/css/produtos.card.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
     <title>Menina dos Sapatos - Produtos</title>
   </head>
 
@@ -21,18 +26,46 @@
         <div class="paginaPrincipal">
           <div class="menuLateral">
             <p class="tituloFiltro"> FILTROS </p>
-            <div class="removerFiltros">
-              <p class="remove"> Remover Filtros</p>
-              <img class="lixo" src="img/imgLogin/lixeira.png" alt="remover-filtros">
+            <div class="container">
+              <div class="container-radios">
+                <div class="container-radio">
+                  <label for="Todos">Todos
+                    <input type="radio" name="filtro" value="S" id="" checked>
+                  </label>
+                </div>
+                <div class="container-radio" style="margin-top: 2%;">
+                  <label for="Feminino">Feminino
+                    <input type="radio" name="filtro" value="S" id="">
+                  </label>
+                </div>
+                <div class="container-radio" style="margin-top: 2%;">
+                  <label for="Masculino">Masculino
+                    <input type="radio" name="filtro" value="S" id="">
+                  </label>
+                </div>
+              </div>
             </div>
-            <div class="busca">
-              <p class="busque"> Busque por preço </p>
+            <button class="remove" style="margin-left: 115px;"> Remover Filtros</button>
+          </div>
+          <div class="container-card">
+            <div class="card-shoes">
+              <div class="card-shoes-image">
+                <img
+                  src="https://a-static.mlcdn.com.br/1500x1500/tenis-gecko-marinho-sticky-shoes/frankartsgrafite2/15944024894/4956492ded5fb38445832fd990a096f1.jpeg"
+                  alt="Salomon" />
+              </div>
+              <div class="card-shoes-details">
+                <span>Sticky Shoes</span>
+                <h5>Tenis Gecko</h5>
+                <p><a href="#">Calçado ocupacional classe II (Polimérico Impermeável), tipo A (Calçado Baixo),
+                    confeccionado em material polimérico com solado de borracha vulcanizada antiderrapante</a></p>
+                <p class="price">R$ 139,00</p>
+              </div>
             </div>
           </div>
         </div>
       </main>
+      <%- include("./partials/footer") %>
   </body>
-  <!-- FOOTER  -->
-  <%- include("./partials/footer") %>
 
 </html>

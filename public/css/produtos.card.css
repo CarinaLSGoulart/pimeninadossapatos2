@@ -1,0 +1,52 @@
+.card-shoes {
+  overflow: hidden;
+}
+
+.card-shoes-image {
+  cursor: pointer;
+}
+
+.card-shoes-image img {
+  width: 230px;
+}
+
+.card-shoes-details {
+  padding: 5px 5px;
+  width: 24%;
+}
+
+.card-shoes-image {
+  width: 280px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.card-shoes-details h5 {
+  color: #fb7a00;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+.card-shoes-details p {
+  margin-top: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 25px;
+}
+.card-shoes-details p a {
+  color: #000;
+  text-decoration: none;
+}
+.card-shoes-details p a:hover {
+  text-decoration: underline;
+}
+.card-shoes-details span {
+  color: #9c9a9a;
+  font-size: 13px;
+}
+.card-shoes-details .price {
+  font-weight: 500;
+}
