@@ -1,9 +1,9 @@
 const path = require('path')
 
-const dadosdepagamentoController = {
+const dadosDePagamentoController = {
     dadosDePagamento: (req, res) => {
-        res.render('dadosdepagamento')
+        res.render('dadosDePagamento')
     }
 }
 
-module.exports = dadosdepagamentoController;     
+module.exports = dadosDePagamentoController;     

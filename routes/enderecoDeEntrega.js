@@ -1,8 +1,8 @@
 let express = require('express')
 let router = express.Router();
 
-const enderecodeentregaController = require('../controllers/enderecoDeEntregaController')
+const enderecoDeEntregaController = require('../controllers/enderecoDeEntregaController')
 
-router.get('/', enderecodeentregaController.enderecodeentrega)
+router.get('/', enderecoDeEntregaController.enderecodeentrega)
 
 module.exports = router;

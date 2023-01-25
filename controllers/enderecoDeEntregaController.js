@@ -1,10 +1,10 @@
 const path = require('path')
 
 const 
-enderecodeentregaController = {
-    enderecodeentrega: (req, res) => {
-        res.render('enderecodeentrega')
+enderecoDeEntregaController = {
+    enderecoDeEntrega: (req, res) => {
+        res.render('enderecoDeEntrega')
     }
 }
 
-module.exports = enderecodeentregaController; 
+module.exports = enderecoDeEntregaController; 

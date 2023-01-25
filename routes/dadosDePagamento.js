@@ -1,8 +1,8 @@
 let express = require('express')
 let router = express.Router();
 
-const dadosdepagamentoController = require('../controllers/dadosDePagamentoController')
+const dadosDePagamentoController = require('../controllers/dadosDePagamentoController')
 
-router.get('/', dadosdepagamentoController.dadosDePagamento)
+router.get('/', dadosDePagamentoController.dadosDePagamento)
 
 module.exports = router;
