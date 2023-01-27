@@ -1,67 +1,62 @@
+/* GERAL */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+    color: #000000;
+    border: none;
+}
 body {
   max-width: 100%;
   height: 100vh;
 }
-
-.link2 {
-  background-color: yellow;
-}
-
-.submenu {
-  display: block;
-  align-items: center;
-}
-
-.minhaConta-menu {
-  text-decoration: none;
-  width: 100%;
-  gap: 5px;
-}
-
-.minhaConta {
-  width: 50%;
-  height: 15rem;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-h1 {
-  text-align: left;
-  margin-left: 40px;
-}
-
-.meuPerfil ul {
-  margin-top: 100px;
+  margin:70px auto;
 }
 
 .meuPerfil {
-  background-color: yellow;
-  height: 35rem;
-  width: 50%;
-  display: flex;
+  background-color: #FFCC01;
+  border-radius: 20px 90px;
+  margin:70px auto;
+  height:35rem;
+  width: 40%;
+  display:flex;
   flex-direction: column;
   text-decoration: none;
-  list-style: none;
   align-items: center;
   text-align: center;
+}  
+
+.meuPerfil h1 {
+  margin-top: 40px;
 }
 
-.minhaConta ul {
-  margin-top: 180px;
-}
-
-.container {
-  display: flex;
-}
-
-.container2 {
-  display: flex;
-  margin-left: 5%;
-}
-
-.perfil {
+.minhaConta {
+  background-color: #FFCC01;
+  border-radius: 20px 90px;
+  margin:70px auto;
+  height:35rem;
+  width: 40%;
+  display:flex;
+  flex-direction: column;
   text-decoration: none;
-  list-style: none;
+  align-items: center;
+  text-align: center;
+}  
+
+.minhaConta h1 {
+  margin-top: 40px;
+}
+.menu1 {
+  font-size: large;
+  line-height: 2.5rem;
+}
+
+.opcoes {
+  margin-top: 90px;
+  list-style-type: none;
 }

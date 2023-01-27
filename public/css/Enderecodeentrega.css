@@ -1,4 +1,16 @@
 
+/* GERAL */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+    color: #000000;
+    border: none;
+}
+
 body {
   max-width: 100%;
   height: 100vh;
@@ -8,50 +20,109 @@ body {
 }
 
 .minhaConta {
-  background-color: yellow;
+  background-color: #FFCC01;
+  border-radius: 20px 90px;
+  margin:70px auto;
   height:35rem;
   width: 40%;
   display:flex;
   flex-direction: column;
   text-decoration: none;
-  list-style: none;
   align-items: center;
   text-align: center;
 }  
 
+.minhaConta h1 {
+  margin-top: 40px;
+}
+.menu1 {
+  font-size: large;
+  line-height: 2.5rem;
+}
+
 .opcoes {
-  margin-top: 120px;
+  margin-top: 90px;
+  list-style-type: none;
 }
 
-.formEndenreco {
-  width: 50%;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.forInput{
-  width: 100%;
-  max-height: 400px;
-  display: flex;
-  flex-direction: column;
-  text-align:center;
-  margin-top: 80px;
-  margin-left: 20px;
+input,
+label {
+    display: block;
+    width: 100%;
 }
 
-.forInput ul {
-  width: 100%;
-  font-size: 12px;
+input:focus,
+label:focus {
+    outline: none;
 }
 
-.forInput h2 {
-  font-size: 20px;
-  margin-left:111px ;
+a {
+    color: #000000
 }
 
-.forInput nav {
-  width: 100%;
-  font-size: 12px;
+body {
+    padding-top: 5vh;
 }
 
+/* FORM */
+
+#address-container {
+    width: 500px;
+    margin:50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+#address-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.full-box {
+    flex: 1 1 100%;
+    position: relative;    
+}
+
+.half-box {
+    flex: 1 1 45%;
+    position: relative;
+}
+
+.spacing {
+    margin-right: 2.5%;
+}
+
+label {
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+input{
+    border-bottom: 2px solid #FFCC01;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+}
+
+input:focus {
+    border-color: #ff9e0d;
+}
+
+input[type="submit"] {
+    background-color: #FFCC01;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    height: 40px;
+    cursor: pointer;
+}
