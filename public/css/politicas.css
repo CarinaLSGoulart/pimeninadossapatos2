@@ -1,6 +1,12 @@
 main{
     margin-top: 100px;
 }
+
+body {
+  max-width: 100%;
+  height: 100vh;
+}
+
 .polit {
     width: 100%;
     height: 100%;
