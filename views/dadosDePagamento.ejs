@@ -13,9 +13,10 @@
   <body>
     <%- include("./partials/header") %>
       <main>
-        <h1>Minha Conta</h1>
+        
         <div class="container">
           <div class="minhaConta">
+            <h1>Minha Conta</h1>
             <nav>
               <ul class="opcoes">
                 <li class="menu1"><a class="link1" href="/perfil">Meu Perfil</a></li>
@@ -27,12 +28,13 @@
               </ul>
             </nav>
           </div>
-          <div>
+          <div class="dadospagamento">
             <h2>Dados de Pagamento</h2>
             <nav id="submenu">
               <ul>
-                <li class="menu2"><a class="container">MARIA SILVA ****_****_****_5472 Vencimento: 08/2032</a></li>
-                <p><input type="radio" name="entrega" id="entrega" value="entrega"><label>Padrão</label></p>
+                <li class="menu2"><a class="container">MARIA SILVA ****_****_****_5472 </a></li>
+                <li class="menu2"><a class="container">Vencimento: 08/2032 </a></li>
+                <p>Tipo de entrega: <input type="radio" name="entrega" id="entrega" value="entrega"><label>Padrão</label></p>
                 <li class="menu2"><a class="container">Excluir</a></li>
               </ul>
             </nav>

@@ -14,54 +14,41 @@
   <body>
     <!-- HEADER - MENU PRINCIPAL -->
     <%- include("./partials/header") %>
-      <main>
-        <!-- Acesso Fácil -->
-        <div class="acesso">
-          <p class="acesse"> Acesso fácil</p>
-          <p>Conecte-se usando seu cadastro de outra plataforma</p>
-        </div>
-        <div class="imagensAcesso">
-          <img class="logoGoogle" src="./img/imgLogin/Google.png" alt="Logo Google">
-          <img class="logoFacebook" src="./img/imgLogin/Facebook.png" alt="Logo Facebook">
-          <img class="logoApple" src="./img/imgLogin/Apple.png" alt="Logo Google">
-        </div>
-        <!-- Formulário Tenho Cadastro -->
-        <div class="formularios">
-          <% if(typeof errors !='undefined' ){ %>
-            <ul>
-              <% for(let i=0; i < erros.length;i++){ %>
-                <li style="color: red">
-                  <%=errors[i] %>
-                </li>
-              <%} %>
-            </ul>
-          <%} %>
-          <div class="tenhoCadastro">
-            <form action="/usuario/login" method="post">
-              <fieldset>
-                <legend>TENHO CADASTRO</legend>
-                <div class="inputBox">
-                  <label for="email">E-mail*</label>
-                  <input type="email" id="email" name="email" class="inputUser" placeholder="E-mail" required />
-                </div>
-                <div class="inputBox">
-                  <label for="senha">Senha*</label>
-                  <input type="password" id="password" name="password" class="inputUser" placeholder="Senha"
-                    required />
-                </div>
-                <div class="conectado">
-                  <label for="conectado">Mantenha-me conectado:</label>
-                  <input type="checkbox" id="conectado1" name="conectado" />
-                </div>
-                <a class="esqueci" href="url">Esqueci minha senha</a>
-                <div class="button">
-                  <button type="submit">ENVIAR</button>
-                </div>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-      </main>
+    <main>
+      <div id="main-container">
+          <h1>Login</h1>
+          <form id="login-form" action="" method="post">
+              <div class="full-box">
+                  <label for="login">Login</label>
+                  <input type="email" name="login" id="login" placeholder="Digite seu e-mail" data-min-length="2"
+                      data-email-validate>
+              </div>
+              <div class="full-box">
+                  <label for="password">Senha</label>
+                  <input type="password" name="password" id="password" placeholder="Digite sua senha"
+                      data-password-validate data-required>
+              </div>
+              <div class="full-box">
+                  <input type="submit" id="btn-submit" value="Entrar">
+              </div>
+               <!--
+              <div id="social-box">
+                  <p>Ou entre pelas suas redes sociais</p>
+              </div>
+             
+              <div class="social-box" >
+                  <a href="http://facebook.com"><i class="fa-brands fa-facebook fa-2x" id="facebook"></i></a>
+                  <a href="http://linkedin.com"><i class="fa-brands fa-linkedin fa-2x" id="linkedin"></i></a>
+                  <a href="http://instagram.com"><i class="fa-brands fa-instagram fa-2x" id="instagram"></i></a>
+              </div> 
+              -->
+              <div id="register-box">
+                  <p>Ainda não tem uma conta?</p>
+                  <a href="#">Registre-se aqui</a>
+              </div>
+          </form>
+      </div>
+  </main>
     <%- include("./partials/footer") %>
   </body>
 
