@@ -1,19 +1,38 @@
-.container {
-    margin-top: 12%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    
-  }
+body {
+  max-width: 100%;
+  height: 100vh;
+}
 
-.Minhaconta {
-    text-decoration: none;
-    list-style: none;
-    
-  }  
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.minhaConta {
+  background-color: yellow;
+  height: 35rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+}
+
+.opcoes {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 200px;
+}
 
 .link2 {
-    background-color: yellow;
-    
-    
-  } 
+  background-color: yellow;
+
+
+}

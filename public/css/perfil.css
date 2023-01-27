@@ -1,13 +1,6 @@
-body{
-  margin-top: 90px;
-  width: 100%;
-}
-
-main {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+body {
+  max-width: 100%;
+  height: 100vh;
 }
 
 .link2 {
@@ -18,6 +11,7 @@ main {
   display: block;
   align-items: center;
 }
+
 .minhaConta-menu {
   text-decoration: none;
   width: 100%;
@@ -26,8 +20,8 @@ main {
 
 .minhaConta {
   width: 50%;
-  height:25rem;
-  display:flex;
+  height: 15rem;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -38,24 +32,36 @@ h1 {
   margin-left: 40px;
 }
 
+.meuPerfil ul {
+  margin-top: 100px;
+}
+
 .meuPerfil {
   background-color: yellow;
-  height:27.5rem;
+  height: 35rem;
   width: 50%;
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-decoration: none;
   list-style: none;
   align-items: center;
   text-align: center;
 }
+
+.minhaConta ul {
+  margin-top: 180px;
+}
+
+.container {
+  display: flex;
+}
+
 .container2 {
   display: flex;
   margin-left: 5%;
-  
 }
 
-.perfil{
+.perfil {
   text-decoration: none;
   list-style: none;
 }
