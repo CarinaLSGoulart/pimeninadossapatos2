@@ -51,12 +51,36 @@ body {
 .minhaConta h1 {
   margin-top: 40px;
 }
-.menu1 {
-  font-size: large;
-  line-height: 2.5rem;
-}
 
 .opcoes {
   margin-top: 90px;
   list-style-type: none;
 }
+
+.menu1 {
+  font-size: large;
+  line-height: 2.5rem;
+}
+
+.container2 {
+  display: flex;
+  margin-top: 50px;
+}
+
+input[type="submit"] {
+  margin: 10px 20px;
+  background-color: #fff;
+  color: #FFCC01;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  height: 40px;
+  width: 130px;
+  cursor: pointer;
+}
+
+input[type="submit"]:active { 
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
