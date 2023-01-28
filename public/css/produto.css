@@ -123,18 +123,22 @@ body {
     cursor: pointer;
 }
 
-.button {
-    display: inline-block;
-    color: #000000;
+input[type="submit"] {
     background-color: #FFCC01;
-    padding: 5px 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    gap: 10px;
-    font-weight: 700;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
 }
+
+input[type="submit"]:active { 
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
 
 .container-maisVendidos {
     margin-top: 80px;

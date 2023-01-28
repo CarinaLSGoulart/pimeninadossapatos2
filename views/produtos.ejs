@@ -60,6 +60,12 @@
                     confeccionado em material polimérico com solado de borracha vulcanizada antiderrapante</a></p>
                 <p class="price">R$ 139,00</p>
               </div>
+              <% produtos.forEach(function(produto) { %>
+                <div>
+                  <h3><%= produto.name %></h3>
+                  <p>Preço: R$<%= produto.price %></p>
+                </div>
+              <% }); %>
             </div>
           </div>
         </div>

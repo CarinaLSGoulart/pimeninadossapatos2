@@ -2,7 +2,8 @@ let express = require('express')
 let router = express.Router();
 const { check, validationResult } = require('express-validator');
 
-const enderecoDeEntregaController = require('../controllers/enderecoDeEntregaController')
+const enderecoDeEntregaController = require('../controllers/enderecoDeEntregaController');
+const usuarioController = require('../controllers/usuarioController');
 
 
 const validationEndereco = [
@@ -14,16 +15,7 @@ const validationEndereco = [
     check('state').notEmpty().withMessage("Estado é obrigatório")
   ];
 
-router.get('/', enderecoDeEntregaController.enderecoDeEntrega)
-router.post('/endereco', validationEndereco, (req, res) => {
-    // Verifica se há erros na validação
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        // Se houver erros, exibe-os para o usuário
-        return res.status(422).json({ errors: errors.array() });
-    }
-    // Se não houver erros, salva o endereço no banco de dados
-    // ...
-});
+router.get('/', enderecoDeEntregaController.enderecoDeEntrega);
+router.post('/endereco', validationEndereco, usuarioController.cadastrar)
 
 module.exports = router;
