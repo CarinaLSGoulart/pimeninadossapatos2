@@ -135,5 +135,9 @@ input[type="submit"]:active {
     justify-content: center;
     align-items: center;
     line-height: 20px;
-    font-size: .8rem;
+    font-size: 1rem;
+}
+
+#register-box a{
+    font-weight: bold;
 }
