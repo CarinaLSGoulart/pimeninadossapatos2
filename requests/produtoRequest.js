@@ -12,7 +12,7 @@ const produtoRequest =  {
     getProduto: (id) => axios ({
         ...defaults,
         method: 'get',
-        url: `${url}/${idProduto}`
+        url: `${url}/${id}`
     }),
     createProduto: (produto) => axios ({
         ...defaults,
@@ -22,18 +22,18 @@ const produtoRequest =  {
         },
         url: `${url}/`
     }),
-    editProduct: (product, idProduto) => axios({
+    editProduct: (product, id) => axios({
         ...def,
         method: 'patch',
         data: {
             ...product
         },
-        url: `${url}/${idProduto}`
+        url: `${url}/${id}`
     }),
-    deleteProduct: (idProduto) => axios({
+    deleteProduct: (id) => axios({
         ...def,
         method: 'delete',        
-        url: `${url}/${idProduto}`
+        url: `${url}/${id}`
     })
 }
 
