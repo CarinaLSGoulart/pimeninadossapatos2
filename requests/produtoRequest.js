@@ -1,7 +1,7 @@
 const axios = require('axios');
 const defaults = require('./default')
 
-const url = 'produto';
+const url = 'produtos';
 
 const produtoRequest =  {
     getProdutos: () => axios({
@@ -22,7 +22,7 @@ const produtoRequest =  {
         },
         url: `${url}/`
     }),
-    editProduct: (product, id) => axios({
+    editProduto: (product, id) => axios({
         ...def,
         method: 'patch',
         data: {
@@ -30,7 +30,7 @@ const produtoRequest =  {
         },
         url: `${url}/${id}`
     }),
-    deleteProduct: (id) => axios({
+    deleteProduto: (id) => axios({
         ...def,
         method: 'delete',        
         url: `${url}/${id}`
