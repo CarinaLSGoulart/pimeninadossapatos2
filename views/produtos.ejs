@@ -46,7 +46,7 @@
               </div>
             </div>
           </div>
-          <div class="container-card">
+         <!--  <div class="container-card">
             <div class="card-shoes">
               <div class="card-shoes-image">
                 <img
@@ -54,19 +54,25 @@
                   alt="Salomon" />
               </div>
               <div class="card-shoes-details">
-                <span>Sticky Shoes</span>
+               <span>Sticky Shoes</span>
                 <h5>Tenis Gecko</h5>
                 <p><a href="#">Calçado ocupacional classe II (Polimérico Impermeável), tipo A (Calçado Baixo),
                     confeccionado em material polimérico com solado de borracha vulcanizada antiderrapante</a></p>
-                <p class="price">R$ 139,00</p>
-              </div>
+                <p class="price">R$ 139,00</p> 
+              </div> -->
+             
+            <div id="produto-container">
+            <h1>Nossos Produtos</h1>
+            <ul>
               <% produtos.forEach(function(produto) { %>
-                <div>
-                  <h3><%= produto.name %></h3>
-                  <p>Preço: R$<%= produto.price %></p>
-                </div>
-              <% }); %>
-            </div>
+              <li>
+                <%= produto.imagem %>
+                <%= produto.nome %> - <%= produto.cor %>
+                <%= produto.descricao %>
+                <%= produto.preco %>
+              </li>
+            <% }); %>
+            </ul>
           </div>
         </div>
       </main>

@@ -14,16 +14,16 @@ const getProdutos = async () => {
         return [];
     }
 };
-const getProduto = async() => {
-    try{
+const getProduto = async () => {
+    try {
         return await produtoRequest.getProduto();
-    }catch (error) {
+    } catch (error) {
         console.error(error);
         return [];
     }
 };
 
-const criarProduto = async() => {
+const criarProduto = async () => {
     try {
         return await produtoRequest.criarProduto();
     } catch (error) {
@@ -31,7 +31,7 @@ const criarProduto = async() => {
         return [];
     };
 }
-const editarProduto = async() => {
+const editarProduto = async () => {
     try {
         return await produtoRequest.editarProduto();
     } catch (error) {
@@ -40,7 +40,7 @@ const editarProduto = async() => {
     };
 };
 
-const deletarProduto = async() => {
+const deletarProduto = async () => {
     try {
         return await produtoRequest.deletarProduto();
     } catch (error) {
@@ -55,8 +55,10 @@ const produtoController = {
         res.render('produto', { produto });
     },
     listar: async (req, res) => {
-        const produtos = await getProdutos();
-        res.render('produtos', { produtos });
+            let produtos = await getProdutos();
+            produtos = Object.values(produtos);
+            res.render('produtos', { produtos });
+        // console.log(typeof produtos)
     },
     criar: async (req, res) => {
         const novoProduto = await criarProduto();
@@ -66,7 +68,7 @@ const produtoController = {
         const atualizarProduto = await editarProduto();
         res.render('produto', { atualizarProduto });
     },
-    deletar: async (req,res) => {
+    deletar: async (req, res) => {
         const excluirProduto = await deletarProduto();
         res.render('produto', { excluirProduto })
     }

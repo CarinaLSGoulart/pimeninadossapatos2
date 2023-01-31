@@ -16,7 +16,7 @@ const validationEndereco = [
   ];
 
 router.get('/', enderecoDeEntregaController.index);
-router.post('/endereco', validationEndereco, usuarioController.cadastrar)
+router.post('/endereco', validationEndereco, usuarioController.criar)
 /* router.put('/enderecoDeEntrega/:id', enderecoDeEntregaController.atualizar);
 router.delete('/enderecoDeEntrega/:id', enderecoDeEntregaController.deletar) */
 

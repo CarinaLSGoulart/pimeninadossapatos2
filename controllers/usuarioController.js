@@ -54,6 +54,18 @@ const usuarioController = {
         const loginUsuario = await getUsuario();
         res.render('login', { loginUsuario})
     },
+    logar: (req, res) => {
+        let errors = validationResult(req)
+        if (!errors.isEmpty()) {
+            return res.render('login', { errors: errors.errors })
+        }
+
+        let user = user.find(usr => usr.email == req.body.email)
+        if (user) {
+            req.session.userLogged = user.email;
+            res.redirect('/perfil')
+        }
+    },
     detalhar: async (req, res) => {
         const usuario = await getUsuario();
         res.render('perfil', { usuario });
