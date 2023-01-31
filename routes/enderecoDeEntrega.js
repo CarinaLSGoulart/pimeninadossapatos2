@@ -15,7 +15,9 @@ const validationEndereco = [
     check('state').notEmpty().withMessage("Estado é obrigatório")
   ];
 
-router.get('/', enderecoDeEntregaController.enderecoDeEntrega);
+router.get('/', enderecoDeEntregaController.index);
 router.post('/endereco', validationEndereco, usuarioController.cadastrar)
+/* router.put('/enderecoDeEntrega/:id', enderecoDeEntregaController.atualizar);
+router.delete('/enderecoDeEntrega/:id', enderecoDeEntregaController.deletar) */
 
 module.exports = router;
