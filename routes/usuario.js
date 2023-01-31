@@ -51,9 +51,12 @@ router.post('/cadastro', [
 );
 
 
-router.get('/', usuarioController.login)
-router.get('/perfil', usuarioController.perfil)
-router.get('/cadastro', usuarioController.cadastro)
-router.post('/login', usuarioController.logar)
+router.get('/', usuarioController.login);
+router.get('/perfil', usuarioController.detalhar);
+router.get('/cadastro', usuarioController.criar);
+router.post('/login', usuarioController.logar);
+router.post('/cadastro', usuarioController.criar);
+router.put('/cadastro', usuarioController.editar);
+router.delete('/cadastro', usuarioController.deletar)
 
 module.exports = router;

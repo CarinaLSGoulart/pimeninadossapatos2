@@ -1,17 +1,10 @@
 const path = require('path')
 const fs = require('fs')
 
-const produtoRequest = require('../requests/produtoRequest')
+const produtoRequest = require('../requests/produtoRequest');
+const { get } = require('http');
 
-/* const produtoFilePath = path.join(__dirname, '../database/produtos.json')
-const produto = JSON.parse(fs.readFileSync(produtoFilePath, 'utf-8')) */
 
-/* let feminino = []
-produto.produtos.forEach((produto) => {    
-  produto.modelos.forEach(function(modelo){  
-        feminino.push(modelo)      
-    })
-}) */
 
 const getProdutos = async () => {
     try {
@@ -21,15 +14,61 @@ const getProdutos = async () => {
         return [];
     }
 };
+const getProduto = async() => {
+    try{
+        return await produtoRequest.getProduto();
+    }catch (error) {
+        console.error(error);
+        return [];
+    }
+};
+
+const criarProduto = async() => {
+    try {
+        return await produtoRequest.criarProduto();
+    } catch (error) {
+        console.error(error);
+        return [];
+    };
+}
+const editarProduto = async() => {
+    try {
+        return await produtoRequest.editarProduto();
+    } catch (error) {
+        console.error(error);
+        return [];
+    };
+};
+
+const deletarProduto = async() => {
+    try {
+        return await produtoRequest.deletarProduto();
+    } catch (error) {
+        console.error(error);
+        return [];
+    };
+};
 
 const produtoController = {
-    produto: async (req, res) => {
-        const produtos = await getProdutos();
-        res.render('produto', { produtos });
+    detalhe: async (req, res) => {
+        const produto = await getProduto();
+        res.render('produto', { produto });
     },
-    produtos: (req, res) => {
-        const produtos = [{ name: 'Produto 1', price: 100 }, { name: 'Produto 2', price: 200 }];
+    listar: async (req, res) => {
+        const produtos = await getProdutos();
         res.render('produtos', { produtos });
+    },
+    criar: async (req, res) => {
+        const novoProduto = await criarProduto();
+        res.render('produto', { novoProduto });
+    },
+    editar: async (req, res) => {
+        const atualizarProduto = await editarProduto();
+        res.render('produto', { atualizarProduto });
+    },
+    deletar: async (req,res) => {
+        const excluirProduto = await deletarProduto();
+        res.render('produto', { excluirProduto })
     }
 };
 

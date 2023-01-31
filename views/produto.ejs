@@ -36,7 +36,18 @@
           <div class="right-side">
             <div class="content">
               <div class="especifc">
-                <h6>Gecko</h6>
+                <h1>Nossos Produtos</h1>
+                <ul>
+                  <% produtos.forEach(function(produto) { %>
+                  <li>
+                    <%= produto.imagem %>
+                    <%= produto.nome %> - <%= produto.cor %>
+                    <%= produto.descricao %>
+                    <%= produto.preco %>
+                  </li>
+                <% }); %>
+                </ul>
+               <!--  <h6>Gecko</h6>
                 <h1>Edição limitada</h1>
               </div>
               <p>Este é o StickyShoe Gecko, um modelo PROFISSIONAL, ou seja, com características desenvolvidas a partir
@@ -54,7 +65,7 @@
               <div class="prices">
                 <span class="price"> R$ 100,00</span>
                 <span class="off"> R$ 135,00</span>
-              </div>
+              </div> -->
               <div class="options">
                 <div class="amount">
                   <div class="minus">
