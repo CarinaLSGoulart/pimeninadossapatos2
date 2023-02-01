@@ -58,7 +58,7 @@ body {
 }
 
 .right-side h6 {
-    font-size: 14px;
+    font-size: 1rem;
     color: #FFCC01;
     background-color: black;
     width: fit-content;
@@ -68,7 +68,7 @@ body {
 }
 
 .right-side h1 {
-    font-size: 8px;
+    font-size: 1rem;
     color: #FFCC01;
     background-color: black;
     width: fit-content;
@@ -138,16 +138,6 @@ input[type="submit"]:active {
     transform: translateY(2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
-#produto-container {
-    display: flex;
-
-}
-
-#produto-container h1 {
-    
-}
-
 
 .container-maisVendidos {
     margin-top: 80px;
