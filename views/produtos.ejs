@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/produtos.css">
-    <link rel="stylesheet" href="/css/produtos.card.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/produtos.css">
+  <link rel="stylesheet" href="/css/produtos.card.css">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
-    <title>Menina dos Sapatos - Produtos</title>
-  </head>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+  <title>Menina dos Sapatos - Produtos</title>
+</head>
 
-  <body>
-    <%- include("./partials/header") %>
-      <main>
-        <!-- TÍTULO PRINCIPAL -->
-        <div class="tituloPrincipal">
-          <h1> PRODUTOS </h1>
-        </div>
-        <!-- PÁGINA PRINCIPAL -->
-        <div class="paginaPrincipal">
-          <div class="menuLateral">
-            <p class="tituloFiltro"> FILTROS </p>
-            <div class="container">
-              <div class="container-radios">
-                <div class="container-radio">
-                  <label for="Todos">Todos
-                    <input type="radio" name="filtro" value="S" id="" checked>
-                  </label>
-                </div>
-                <div class="container-radio" style="margin-top: 2%;">
-                  <label for="Feminino">Feminino
-                    <input type="radio" name="filtro" value="S" id="">
-                  </label>
-                </div>
-                <div class="container-radio" style="margin-top: 2%;">
-                  <label for="Masculino">Masculino
-                    <input type="radio" name="filtro" value="S" id="">
-                  </label>
-                </div>
+<body>
+  <%- include("./partials/header") %>
+    <main>
+      <!-- TÍTULO PRINCIPAL -->
+      <div class="tituloPrincipal">
+        <h1> PRODUTOS </h1>
+      </div>
+      <!-- PÁGINA PRINCIPAL -->
+      <div class="paginaPrincipal">
+        <div class="menuLateral">
+          <p class="tituloFiltro"> FILTROS </p>
+          <div class="container">
+            <div class="container-radios">
+              <div class="container-radio">
+                <label for="Todos">Todos
+                  <input type="radio" name="filtro" value="S" id="" checked>
+                </label>
+              </div>
+              <div class="container-radio" style="margin-top: 2%;">
+                <label for="Feminino">Feminino
+                  <input type="radio" name="filtro" value="S" id="">
+                </label>
+              </div>
+              <div class="container-radio" style="margin-top: 2%;">
+                <label for="Masculino">Masculino
+                  <input type="radio" name="filtro" value="S" id="">
+                </label>
               </div>
             </div>
           </div>
-         <!--  <div class="container-card">
+        </div>
+        <!--  <div class="container-card">
             <div class="card-shoes">
               <div class="card-shoes-image">
                 <img
@@ -60,23 +60,26 @@
                     confeccionado em material polimérico com solado de borracha vulcanizada antiderrapante</a></p>
                 <p class="price">R$ 139,00</p> 
               </div> -->
-             
-            <div id="produto-container">
-            <h1>Nossos Produtos</h1>
-            <ul>
-              <% produtos.forEach(function(produto) { %>
-              <li>
-                <%= produto.imagem %>
-                <%= produto.nome %> - <%= produto.cor %>
-                <%= produto.descricao %>
-                <%= produto.preco %>
-              </li>
-            <% }); %>
-            </ul>
-          </div>
-        </div>
-      </main>
-      <%- include("./partials/footer") %>
-  </body>
+
+        <!-- TODOS OS PRODUTOS-->
+        <% produtos.forEach(function(produto) { %>
+          <div class="container-card">
+            <div class="card-shoes">
+              <a href="/produtos/detalhar/<%= produto.id %>"></a>
+              <div class="card-shoes-image">
+                <img src="../public/img/imgProduto/<%= produto.imagem %>" alt="imagem do produto">
+              </div>
+              <div class="card-shoes-details">
+               <!--  <span><%= produto.nome %></span> -->
+                <h5><%= produto.codigoSku %></h5>
+                <p><a href="/produto"><%= produto.descricao %></a></p>
+                <p class="price"><%= produto.preco %></p>
+              </div>
+            </div>
+          </div>    <% }) %>
+      </div>
+    </main>
+    <%- include("./partials/footer") %>
+</body>
 
 </html>

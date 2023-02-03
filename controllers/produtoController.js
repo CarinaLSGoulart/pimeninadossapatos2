@@ -50,15 +50,16 @@ const deletarProduto = async () => {
 };
 
 const produtoController = {
-    detalhe: async (req, res) => {
-        const produto = await getProduto();
+    detalhar: async (req, res) => {
+        let id = req.params.id;
+        let produto = await getProduto(id);
+        produto = produto.data;
         res.render('produto', { produto });
     },
     listar: async (req, res) => {
-            let produtos = await getProdutos();
-            produtos = Object.values(produtos);
-            res.render('produtos', { produtos });
-        // console.log(typeof produtos)
+        let produtos = await getProdutos();
+        produtos = produtos.data;
+        res.render('produtos', { produtos });
     },
     criar: async (req, res) => {
         const novoProduto = await criarProduto();

@@ -58,3 +58,7 @@ h1 {
     text-transform: none;
     color: black; 
 }
+
+.container produto-wrapper {
+    display: flex;
+}
