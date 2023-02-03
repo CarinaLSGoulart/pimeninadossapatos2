@@ -50,27 +50,27 @@ const deletarProduto = async () => {
 };
 
 const produtoController = {
+    listar: async (req, res) => {
+        let produtos = await getProdutos();
+        produtos = produtos.data;
+        res.render('produtos', { produtos });
+    },
     detalhar: async (req, res) => {
         let id = req.params.id;
         let produto = await getProduto(id);
         produto = produto.data;
         res.render('produto', { produto });
     },
-    listar: async (req, res) => {
-        let produtos = await getProdutos();
-        produtos = produtos.data;
-        res.render('produtos', { produtos });
-    },
     criar: async (req, res) => {
         const novoProduto = await criarProduto();
         res.render('produto', { novoProduto });
     },
     editar: async (req, res) => {
-        const atualizarProduto = await editarProduto();
+        const atualizarProduto = await editarProduto(id);
         res.render('produto', { atualizarProduto });
     },
     deletar: async (req, res) => {
-        const excluirProduto = await deletarProduto();
+        const excluirProduto = await deletarProduto(id);
         res.render('produto', { excluirProduto })
     }
 };

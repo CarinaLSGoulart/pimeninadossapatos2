@@ -1,4 +1,4 @@
-const { perfil } = require("../../controllers/usuarioController");
+const { detalhar } = require("../../controllers/usuarioController");
 
 window.addEventListener("DOMContentLoaded", function() {
   const userInfoDiv = document.querySelector("#user-info");

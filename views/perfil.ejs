@@ -20,25 +20,25 @@
             <ul class="opcoes">
               <li class="menu1"><a class="link1" href="/Login/perfil">Meu Perfil</a></li>
               <li class="menu1"><a class="link2" href="/enderecoDeEntrega">Endereço de Entrega</a></li>
-              <li class="menu1"><a class="link1" href="/dadosDePagamento">Dados de Pagamento</a></li>
+              <!-- <li class="menu1"><a class="link1" href="/dadosDePagamento">Dados de Pagamento</a></li> -->
               <li class="menu1"><a class="link1" href="/politicas">Trocas e Devoluções</a></li>
             </ul>
           </nav>
-          <div class="container2">
+          <!-- <div class="container2">
             <input class="btn-alterar" type="submit" value="Alterar Dados">
             <input class="btn-alterar" type="submit" value="Alterar Senha">
-          </div>
+          </div> -->
         </div>
         <div class="minhaConta">
           <div class="submenu">
             <h1>Minha Conta</h1>
                <div id="user-info">
                 <h2>Olá, </h2>
-              <p>Nome completo: <%= perfil.nome %> <%= perfil.lastname %>
+              <p>Nome completo: <%= usuario.nome %> <%= usuario.sobrenome %>
               </p>
-              <p>Endereço: <%= perfil.address %>
+          
               </p>
-              <p>E-mail: <%= perfil.email %>
+              <p>E-mail: <%= usuario.email %>
               </p>
             </div> 
           </div>
