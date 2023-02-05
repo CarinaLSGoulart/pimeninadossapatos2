@@ -62,21 +62,30 @@
               </div> -->
 
         <!-- TODOS OS PRODUTOS-->
+        <div>
         <% produtos.forEach(function(produto) { %>
           <div class="container-card">
-            <div class="card-shoes">
-              <a href="/produtos/detalhar/<%= produto.id %>"></a>
-              <div class="card-shoes-image">
-                <img src="../public/img/imgProduto/<%= produto.imagem %>" alt="imagem do produto">
-              </div>
-              <div class="card-shoes-details">
-               <!--  <span><%= produto.nome %></span> -->
-                <h5><%= produto.codigoSku %></h5>
-                <p><a href="/produto"><%= produto.descricao %></a></p>
-                <p class="price"><%= produto.preco %></p>
-              </div>
-            </div>
-          </div>    <% }) %>
+            <section class="card-shoes">
+              <a href= "/produtos/detalhar/<%= produto.id %>">
+                <figure class= "card-shoes-image">
+                  <img src="../public/img/imgProduto/<%= produto.imagem %>" alt="imagem do produto">
+                </figure>
+                <article class="card-shoes-details">
+                  <h2><%= produto.codigoSku %> </h2>
+                
+                  <p><a href="/produto"><%= produto.descricao %></a></p>
+                  <i class="fas fa-truck"></i>
+                </article>
+              </a>
+            </section>
+          </div>
+           <% }) %>
+        </div>
+
+        
+
+
+
       </div>
     </main>
     <%- include("./partials/footer") %>

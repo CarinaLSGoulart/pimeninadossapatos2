@@ -124,18 +124,18 @@
 
  /* EFEITO ZOOM ÍCONES */
 
-.usuario-icon, .favoritos-icon, .sacola-icon  {
+.usuario-icon, .entrar-icon, .sacola-icon  {
     overflow: hidden;
 }
 
-.usuario-icon img, .favoritos-icon img, .sacola-icon img {
+.usuario-icon img, .entrar-icon img, .sacola-icon img {
   padding: 5%;
   transition: all 0.3s;
   box-sizing: border-box;
   height: 35px;
 }
 
-.usuario-icon:hover img, .favoritos-icon:hover img, .sacola-icon:hover img{
+.usuario-icon:hover img, .entrar-icon:hover img, .sacola-icon:hover img{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }

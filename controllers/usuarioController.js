@@ -63,11 +63,12 @@ const usuarioController = {
         let user = user.find(usr => usr.email == req.body.email)
         if (user) {
             req.session.userLogged = user.email;
-            res.redirect('/perfil')
+            res.redirect('/home')
         }
     },
     detalhar: async (req, res) => {
-        const usuario = await getUsuario();
+        let id = req.params.id;
+        const usuario = await getUsuario(id);
         res.render('perfil', { usuario });
     },
     criar: async (req, res) => {
