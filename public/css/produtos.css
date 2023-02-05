@@ -1,141 +1,48 @@
-body {
-  max-width: 100%;
-  height: 100vh;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFCC01;
-    margin-top: 6.5%;
-
+main {
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.tituloPrincipal {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 95px;
+  text-align: center;
+  background-color: #FFCC01;
+  box-shadow: 10px 5px 5px black
+}
+
 .paginaPrincipal {
-    display: inline-flex;
-    margin-bottom: 6%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.menuLateral {
-    width: 350px;
-    align-items: left;
-    margin-left: 10px;
-}
-
-.produtos-femininos {
-    width: 400px;
-}
-
-.tituloFiltro {
-    font-family: montserrat, sans-serif;
-    font-weight: 700;
-    font-style: bold;
-    text-align:center ;
-    width: 350px;
-}
-
-.container {
-    width: 100%;
-    height: 7rem;
-    display:flex;
-    justify-content: center;
+.todosProdutos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: space-between;
     align-items: center;
+    margin: 40px auto;
+    grid-gap: 50px;   
+    width: 1300px;
+    max-width: 100%; 
 }
 
-.container-radio {
-    font-size: larger;
-    width: 100%;
-    margin: 3%;
+.card-shoes-image {
+  width: 100%;
 }
 
-.card {
-    border: #FFCC01 2px solid;
-    padding: 5%;
+.card-shoes-details h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFCC01;
+  width: 100%;
+  
 }
 
-.desc {
-    text-transform: none;
-    color: black; 
-}
-
-.container-card {
-    display: flex;
-    background-color: #ffffff;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: 300ms;
-    margin: 20px 0;
-  }
-  
-  .container-card a {
-    display: block;
-  }
-  
-  .container-card_image {
-    border-bottom: 1px solid var(--light-gray);
-  }
-  
-  .container-card_data {
-    padding: 15px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .container-card_data h2 {
-    font-size: 2.4em;
-    font-weight: 300;
-    margin: 0;
-  }
-  
-  .container-card_data span {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: var(--green);
-    margin: 0 0 0 10px;
-  }
-  
-  .container-card_data p {
-    font-size: 1.5em;
-    width: 100%;
-    color: var(--gray);
-    margin: 0;
-    height: 0;
-    transition: 300ms;
-    overflow: hidden;
-  }
-  
-  .container-card_data i {
-    color: var(--green);
-    font-size: 1.8em;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    border: solid 1px;
-    border-radius: 50%;
-    position: absolute;
-    top: -15px;
-    right: 15px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 300ms;
-  }
-  
-  .container-card:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .container-card:hover p {
-    height: 40px;
-    margin-top: 15px;
-  }
-  
-  .container-card:hover i {
-    transform: rotate(360deg);
-    box-shadow: 0 0 5px var(--green);
-  }
-  

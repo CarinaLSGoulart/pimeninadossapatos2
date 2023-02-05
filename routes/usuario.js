@@ -4,21 +4,6 @@ const usuarioController = require('../controllers/usuarioController')
 const { check, validationResult } = require('express-validator');
 
 
-/* const validacoes = [
-    check('email')
-    .isEmpty().withMessage('Email não pode ser vazio').bail()
-    .isEmail().withMessage('Deve informar um email válido!').bail(),
-    check('password')
-    .isEmpty().withMessage('Senha não pode ser vazia').bail()
-    .isStrongPassword().withMessage('Deve ser uma senha forte.').bail(),
-    check('confpassword')
-    .isEmpty().withMessage('Confirmação de senha não pode estar vazia').bail()
-    .custom((value, { req }) => {
-        if (value !== req.body.password) {
-          throw new Error('A senha deve ser igual.')
-        }
-        return true;}),] */
-
 //######  VALIDAÇÃO LOGIN #####
 
 router.post('/login', [

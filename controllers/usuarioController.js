@@ -1,6 +1,7 @@
 const path = require('path')
 const { validationResult } = require('express-validator')
 const fs = require('fs')
+const usuarioRequest = require('../requests/usuarioRequest')
 
 /* const usersFilePath = path.join(__dirname, '../database/usuarios.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')) */
@@ -59,7 +60,7 @@ const usuarioController = {
         if (!errors.isEmpty()) {
             return res.render('login', { errors: errors.errors })
         }
-
+        
         let user = user.find(usr => usr.email == req.body.email)
         if (user) {
             req.session.userLogged = user.email;
