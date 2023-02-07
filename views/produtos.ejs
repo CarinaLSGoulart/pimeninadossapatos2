@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/produtos.css">
   <link rel="stylesheet" href="/css/style.css">
- 
+
   <title>Menina dos Sapatos - Produtos</title>
 </head>
 
@@ -57,20 +57,22 @@
                         <%= produto.nome %>
                       </a></h2>
                     <p class="price"> R$ <%= produto.preco %>,00</p>
-                    <i class="fa-regular fa-cart-shopping"></i>
+                    <div class="addSacola-container">
+                     <button onclick="decrement()">-</button>
+                      <h2 id="counting"></h2>
+                      <button onclick="increment()">+</button>
+                      <p><input id="adionarASacola" type="submit" value="Adicionar a Sacola"></p>
+                    </div>
                   </article>
                 </a>
               </section>
             </div>
             <% }) %>
         </div>
-
-
-
-
-
       </div>
     </main>
+
+    <script src="/js/sacola.js"></script>
     <%- include("./partials/footer") %>
 </body>
 

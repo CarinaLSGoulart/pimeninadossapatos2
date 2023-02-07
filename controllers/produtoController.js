@@ -66,11 +66,11 @@ const produtoController = {
         res.render('produto', { novoProduto });
     },
     editar: async (req, res) => {
-        const atualizarProduto = await editarProduto(id);
+        const atualizarProduto = await editarProduto(req.params.id);
         res.render('produto', { atualizarProduto });
     },
     deletar: async (req, res) => {
-        const excluirProduto = await deletarProduto(id);
+        const excluirProduto = await deletarProduto(req.params.id);
         res.render('produto', { excluirProduto })
     }
 };

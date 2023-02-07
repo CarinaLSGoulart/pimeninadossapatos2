@@ -1,7 +1,7 @@
 *{
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0 5px;
+  padding: 5px;
 }
 
 main {
@@ -35,7 +35,7 @@ main {
 }
 
 .card-shoes-image {
-  width: 100%;
+  width: 85%;
 }
 
 .card-shoes-details h2 {
@@ -45,4 +45,63 @@ main {
   width: 100%;
   
 }
+
+.addSacola-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  text-align: center;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background-color: rgb(255, 211, 14);
+  color: rgb(0, 0, 0);
+  border-radius: 50px;
+  border-color: rgb(255, 211, 14);
+}
+
+/*apply hover effect to button tag*/
+
+button:hover {
+  background-color: rgb(255, 196, 3);;
+  color: grey;
+}
+
+/*apply css properties to h2 tag*/
+  
+#counting {
+  color: black;
+  font-size: 1rem;
+}
+
+/*apply css properties to h1 tag*/
+
+h1 {
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  padding-left: 10%;
+}
+
+
+input[type="submit"] {
+  background-color: #FFCC01;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  height: 40px;
+  cursor: pointer;
+}
+
+input[type="submit"]:active { 
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
 

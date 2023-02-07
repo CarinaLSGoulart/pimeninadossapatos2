@@ -35,7 +35,6 @@ app.use('/enderecoDeEntrega', routerenderecoDeEntrega);
 app.use('/politicas', routesPoliticas);
 
 
-
 /* ===== EJS ===== */
 app.set("view engine", "ejs") 
 /* ===== Dependencias e Arquivos ===== */
