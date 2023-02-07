@@ -16,7 +16,9 @@
         <div class="left-side">
           <div class="items">
             <div class="select-image">
-              <img src="img/imgProduto/<%= produto.imagem %>" alt="imagem do produto">
+              <figure class="card-shoe-image">
+                <img src="/img/imgProduto/<%= produto.imagem %>" alt="imagem do produto">
+              </figure>
             </div>
             <!-- <div class="thumbnails">
               <div class="thumbnail">
@@ -33,12 +35,13 @@
         </div>
         <div class="right-side">
           <div class="content">
-            <div class="especifc">
-              <h1><%= produto.nome %></h1>
+            <div id="product-detail">
+              <h1 id="item"><%= produto.nome %></h1>
               <h2><%= produto.codigoSku %></h2>
               <h3><%= produto.descricao %></h3>
+              <span class="price"><%= produto.preco %></span>
             </div>
-            <!-- <p>Este é o StickyShoe Gecko, um modelo PROFISSIONAL, ou seja, com características desenvolvidas a partir de necessidades que devem diversas rotinas profissionais.
+ <!--             <p>Este é o StickyShoe Gecko, um modelo PROFISSIONAL, ou seja, com características desenvolvidas a partir de necessidades que devem diversas rotinas profissionais.
               - Impermeável
               - Solado antiderrapante realmente <strong class="strbold">INCRÍVEL</strong>: Este solado é testado e aprovado pelo Ministério do Trabalho. Ideal para Profissionais que trabalham em pisos escorregadios, ensaboados, com restos de alimento, enfim, um solado antiderrapante realmente robusto.
               - Elemento anti torção: Na região da curvatura dos pés (arco plantar) este modelo possui um elemento feito em material rígido.
@@ -46,13 +49,13 @@
               Tudo isso com Aprovação do Ministério do Trabalho e feito respeitando o formato dos pés Femininos.
               A loja de Profissionais que Amam o que Fazem.</p>
             <div class="prices"> -->
-              <span class="price"><%= produto.preco %></span>
-              <!-- <span class="off"> R$ 135,00</span> -->
+              
+              <!-- <span class="off"> R$ 135,00</span> --> 
             </div>
             <div class="options">
               <div class="amount">
                 <div class="minus">
-                  <img src="./img/imgProduto/icons/icon-minus.svg" alt="minus">
+                  <img src="/img/imgProduto/icons/icon-minus.svg" alt="minus">
                 </div>
                 <span>0</span>
                 <div class="plus">
@@ -64,7 +67,7 @@
           </div>
         </div>
       </div>
-      <div class="container-maisVendidos">
+      <!-- <div class="container-maisVendidos">
         <div>
           <h1>FAVORITOS</h1>
         </div>
@@ -81,7 +84,7 @@
         </div>
         <div>
           <a href="/produto"><img src="./img/imgHome/IMG_4107.PNG" class="produto" alt="produto3"></a>
-        </div>
+        </div> -->
       </section>
     </section>
   </main>

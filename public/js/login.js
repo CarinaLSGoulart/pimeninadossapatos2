@@ -2,10 +2,10 @@
 //SCRIPT DE SESSION STORAGE
 
 // Recuperar informações do formulário de login
-/* function login() {
+function login() {
     const usuario = document.getElementById('login').value;
     const senha = document.getElementById('password').value;
-} */
+}
 //requisição para verificação de login
     const reqLogin = new XMLHttpRequest();
     reqLogin.open("POST", "http:localhost:3333/login", true);
@@ -27,7 +27,7 @@
 
     // Função para recuperar informações do usuário a partir da sessão storage
 function getInfoUsuario() {
-    const infoUsuario = sessionStorage.getItem("loggedInUser");
+    const infoUsuario = sessionStorage.getItem("usuarioLogado");
     if (infoUsuario) {
       return JSON.parse(infoUsuario);
     }

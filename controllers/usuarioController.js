@@ -53,19 +53,28 @@ const deletarUsuario = async() => {
 const usuarioController = {
     login: async (req, res) => {
         const loginUsuario = await getUsuario();
-        res.render('login', { loginUsuario})
+        res.render('login', {loginUsuario})
     },
     logar: (req, res) => {
         let errors = validationResult(req)
         if (!errors.isEmpty()) {
             return res.render('login', { errors: errors.errors })
-        }
-        
-        let user = user.find(usr => usr.email == req.body.email)
-        if (user) {
-            req.session.userLogged = user.email;
-            res.redirect('/home')
-        }
+        }        
+        let usuario = req.body.email;
+		let senha = req.body.password;
+		
+		let usuarioEncontrado = usuario.find(usuario => usuario.usuario == usuario)
+
+		if (usuarioEncontrado){			
+				if (usuarioEncontrado.senha === senha){	
+					req.session.usuarioLogado = usuario;
+					res.redirect('/')
+				}
+		}else{			
+			let errors = []
+			errors.push('Usuario não encontrado')			
+			res.render('login', {errors})
+		}
     },
     detalhar: async (req, res) => {
         let id = req.params.id;
@@ -86,46 +95,6 @@ const usuarioController = {
     }
 };
 
-/* 
-const usuarioController = {
-    login: (req, res) => {
-        res.render('login')
-    },
-    perfil: (req, res) => {
-        const user = req.user;
-        res.render('perfil', { user })
-    },
-    cadastro: (req, res) => {
-        res.render('cadastro')
-    },
-    cadastrar: (req, res) => {
-        // Verifica se há erros na validação
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            // Se houver erros, exibe-os para o usuário
-            return res.status(422).json({ errors: errors.array() });
-        }
-        // Se não houver erros, salva o endereço no banco de dados
-        // ...
-    },
-    logar: (req, res) => {
-        let errors = validationResult(req)
-        if (!errors.isEmpty()) {
-            return res.render('login', { errors: errors.errors })
-        }
+module.exports = usuarioController; 
 
-        let user = user.find(usr => usr.email == req.body.email)
-        if (user) {
-            req.session.userLogged = user.email;
-            res.redirect('/perfil')
-        }
-    },
-    editar: (req,res) => {
-
-    },
-    deletar: (req,res) => {
-
-    }
-} */
-
-module.exports = usuarioController;     
+    
