@@ -1,19 +1,18 @@
-
-//INCREMENTO E DECREMENTO DE PRODUTOS  
-    var data = 0;
-  
+//INCREMENTO E DECREMENTO DE PRODUTOS
+var data = 0;
 //imprimir o valor da variavel data na tag h2
-    document.getElementById("counting").innerText = data;
-  
+    document.getElementById("counting-1").innerText = data;
 //funcao de incremento
-    function increment() {
-        data = data + 1;
-        document.getElementById("counting").innerText = data;
+    function increment(element) {
+        var countingId = element.previousElementSibling.id;
+        data = parseInt(document.getElementById(countingId).innerText) + 1;
+        document.getElementById(countingId).innerText = data;
     }
 //funcao de decremento
-    function decrement() {
-        data = data - 1;
-        document.getElementById("counting").innerText = data;
+    function decrement(element) {
+        var countingId = element.nextElementSibling.id;
+        data = parseInt(document.getElementById(countingId).innerText) - 1;
+        document.getElementById(countingId).innerText = data;
     }
 
 //ADICIONAR PRODUTOS A SACOLA

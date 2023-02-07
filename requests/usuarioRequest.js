@@ -14,6 +14,15 @@ const usuarioRequest =  {
         method: 'get',
         url: `${url}/${id}`
     }),
+
+    usuarioLogar: (credenciais) => axios({
+        ...defaults,
+        method: 'post',
+        data: {
+            ...credenciais
+        },
+        url: `${url}/login`
+    }),
     criarUsuario: (Usuario) => axios ({
         ...defaults,
         method: 'post',
