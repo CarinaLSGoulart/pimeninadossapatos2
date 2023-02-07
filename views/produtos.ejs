@@ -57,12 +57,12 @@
                         <%= produto.nome %>
                       </a></h2>
                     <p class="price"> R$ <%= produto.preco %>,00</p>
-                    <div class="addSacola-container">
-                     <button onclick="decrement()">-</button>
-                      <h2 id="counting"></h2>
-                      <button onclick="increment()">+</button>
-                      <p><input id="adionarASacola" type="submit" value="Adicionar a Sacola"></p>
-                    </div>
+                    <div class="addSacola-container" id="item-1">
+                      <button onclick="decrement(this)">-</button>
+                       <h2 id="counting-1"></h2>
+                       <button onclick="increment(this)">+</button>
+                       <p><input id="adionarASacola" type="submit" value="Adicionar a Sacola"></p>
+                     </div>
                   </article>
                 </a>
               </section>

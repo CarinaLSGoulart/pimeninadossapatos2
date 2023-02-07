@@ -1,7 +1,8 @@
 const path = require('path')
 const { validationResult } = require('express-validator')
 const fs = require('fs')
-const usuarioRequest = require('../requests/usuarioRequest')
+const usuarioRequest = require('../requests/usuarioRequest');
+const { logarUsuario } = require('../requests/usuarioRequest');
 
 /* const usersFilePath = path.join(__dirname, '../database/usuarios.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')) */
@@ -15,16 +16,25 @@ const getUsuarios = async () => {
         return [];
     }
 };
-const getUsuario = async() => {
-    try{
+const getUsuario = async () => {
+    try {
         return await usuarioRequest.getUsuario();
-    }catch (error) {
+    } catch (error) {
         console.error(error);
         return [];
     }
 };
 
-const criarUsuario = async() => {
+const usuarioLogar = async () => {
+    try {
+        return await usuarioRequest.usuarioLogar();
+    }catch(error) {
+        console.error(error);
+        return [];
+    }
+};
+
+const criarUsuario = async () => {
     try {
         return await usuarioRequest.criarUsuario();
     } catch (error) {
@@ -32,7 +42,7 @@ const criarUsuario = async() => {
         return [];
     };
 }
-const editarUsuario = async() => {
+const editarUsuario = async () => {
     try {
         return await usuarioRequest.editarUsuario();
     } catch (error) {
@@ -41,7 +51,7 @@ const editarUsuario = async() => {
     };
 };
 
-const deletarUsuario = async() => {
+const deletarUsuario = async () => {
     try {
         return await usuarioRequest.deletarUsuario();
     } catch (error) {
@@ -53,29 +63,14 @@ const deletarUsuario = async() => {
 const usuarioController = {
     login: async (req, res) => {
         const loginUsuario = await getUsuario();
-        res.render('login', {loginUsuario})
+        res.render('login', { loginUsuario })
     },
-    logar: (req, res) => {
-        let errors = validationResult(req)
-        if (!errors.isEmpty()) {
-            return res.render('login', { errors: errors.errors })
-        }        
-        let usuario = req.body.email;
-		let senha = req.body.password;
-		
-		let usuarioEncontrado = usuario.find(usuario => usuario.usuario == usuario)
+    logar: 
+        async (req, res) => {
+            const logarUsuario = await usuarioLogar();
+            res.render('perfil', { logarUsuario })
+        },
 
-		if (usuarioEncontrado){			
-				if (usuarioEncontrado.senha === senha){	
-					req.session.usuarioLogado = usuario;
-					res.redirect('/')
-				}
-		}else{			
-			let errors = []
-			errors.push('Usuario não encontrado')			
-			res.render('login', {errors})
-		}
-    },
     detalhar: async (req, res) => {
         let id = req.params.id;
         const usuario = await getUsuario(id);
@@ -89,12 +84,11 @@ const usuarioController = {
         const atualizarUsuario = await editarUsuario();
         res.render('perfil', { atualizarUsuario });
     },
-    deletar: async (req,res) => {
+    deletar: async (req, res) => {
         const excluirUsuario = await deletarUsuario();
         res.render('perfil', { excluirUsuario })
     }
 };
 
-module.exports = usuarioController; 
+module.exports = usuarioController;
 
-    

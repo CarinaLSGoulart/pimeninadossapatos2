@@ -31,10 +31,10 @@ body {
 
 #main-container {
     width: 500px;
-    margin:50px auto;
+    margin: 50px auto;
     background-color: #fff;
     border-radius: 10px;
-    padding: 25px;
+    padding: 20px;
 }
 
 #main-container h1 {
@@ -123,7 +123,6 @@ input[type="submit"]:active {
 
 #perfil-box {
     margin: 0 auto;
-    margin-bottom: 40px;
     display: flex;
     width: 50%;
     flex-direction: column;
